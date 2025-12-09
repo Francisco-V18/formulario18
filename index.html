@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestor de Tareas</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #eeeeee;
+    }
+
+    .contenedor {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .menu {
+      width: 220px;
+      background: #1e3a5f;
+      padding: 20px;
+    }
+
+    .menu h2 {
+      color: white;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .menu a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #2b4f77;
+    }
+
+    .menu a:hover {
+      background: #f4d35e;
+      color: #1e3a5f;
+    }
+
+    .menu .activo {
+      background: #f4d35e;
+      color: #1e3a5f;
+      font-weight: bold;
+    }
+
+    .contenido {
+      flex: 1;
+      padding: 40px;
+      background: white;
+    }
+
+    .contenido h1 {
+      color: #1e3a5f;
+      margin-bottom: 20px;
+    }
+
+    form {
+      background: #dddddd;
+      padding: 25px;
+      width: 420px;
+      border-radius: 8px;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #999;
+      border-radius: 5px;
+    }
+
+    textarea {
+      height: 90px;
+    }
+
+    button {
+      margin-top: 18px;
+      width: 100%;
+      padding: 10px;
+      background: #f4d35e;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      color: #1e3a5f;
+    }
+
+    button:hover {
+      background: #e6c247;
+    }
+  </style>
+
+</head>
+<body>
+
+<div class="contenedor">
+
+  <div class="menu">
+    <h2>Gestor</h2>
+    <a href="#">Tareas</a>
+    <a class="activo" href="#">Nueva Tarea</a>
+    <a href="#">Búsqueda</a>
+    <a href="#">Salir</a>
+  </div>
+
+  <div class="contenido">
+    <h1>Nueva Tarea</h1>
+
+    <form>
+
+      <label>Código de la Tarea</label>
+      <input type="text">
+
+      <label>Nombre de la Tarea</label>
+      <input type="text">
+
+      <label>Descripción</label>
+      <textarea></textarea>
+
+      <label>Prioridad</label>
+      <select>
+        <option>Alta</option>
+        <option>Media</option>
+        <option>Baja</option>
+      </select>
+
+      <label>Estado</label>
+      <select>
+        <option>Pendiente</option>
+        <option>En Proceso</option>
+        <option>Terminada</option>
+      </select>
+
+      <label>Fecha de Vencimiento</label>
+      <input type="date">
+
+      <button>Registrar Tarea</button>
+
+    </form>
+
+  </div>
+
+</div>
+
+</body>
+</html>
